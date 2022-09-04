@@ -1,0 +1,14 @@
+version: '3.9' # optional since v1.27.0
+services:
+  nest-api:
+    image: postgres
+    ports:
+      - '3009:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    networks:
+      - nest-api-network
+networks:
+  nest-api-network:
